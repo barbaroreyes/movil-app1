@@ -1,5 +1,5 @@
 import {View ,Text} from 'react-native'
-import {globalStyles} from '../src/styles/globalStyles'
+import {globalStyles} from '../styles/globalStyles'
 export default function Profile (){
     return(
         <View style={globalStyles.screenContainer}>
