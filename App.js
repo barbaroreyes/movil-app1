@@ -1,21 +1,13 @@
 
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
+import {globalStyles} from './src/styles/globalStyles'
+import Home from './src/screens/Home'
+import RootNavigator from './src/navigations/RootNavigator';
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Navigation!</Text>
-     
-    </View>
+         <RootNavigator/>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
