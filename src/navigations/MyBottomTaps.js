@@ -1,6 +1,7 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '../screens/Home';
 import Profile from '../screens/Profile';
+import {Colors} from '../contants/colors'
 import {FontAwesome} from '@expo/vector-icons'
 
 const MyTab = createBottomTabNavigator();
@@ -10,7 +11,8 @@ export default function MyBottomTab(){
    <MyTab.Navigator
    initialRouteName='Home'
    screenOptions={{
-    headerTitleAlign:'center'
+    headerTitleAlign:'center',
+    tabBarActiveTintColor: Colors.secondary
    }}
    >
     <MyTab.Screen
@@ -19,7 +21,7 @@ export default function MyBottomTab(){
      options={{
         tabBarIcon:({color})=> <FontAwesome 
                      name="home"
-                     size={24}
+                     size={30}
                      color= {color}
                      />
      }}
@@ -28,9 +30,11 @@ export default function MyBottomTab(){
     name="Profile"
      component={Profile}
      options={{
+        tabBarBadge:3,
+        tabBarBadgeStyle:{backgroundColor:'green',color:Colors.ligth},
         tabBarIcon:({color})=> <FontAwesome 
                      name="user"
-                     size={24}
+                     size={30}
                      color= {color}
                      />
      }}
